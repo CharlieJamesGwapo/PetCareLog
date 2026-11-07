@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Widget.PetCare.Toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            app:title="@string/my_pets" />
+
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp" android:paddingTop="16dp" android:paddingBottom="4dp"
+            android:textColor="@color/teal_dark" android:textSize="20sp" android:textStyle="bold" />
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/petList"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:clipToPadding="false" android:padding="12dp"
+                android:paddingBottom="88dp" />
+
+            <LinearLayout
+                android:id="@+id/emptyState"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical"
+                android:padding="32dp" android:visibility="gone">
+                <ImageView
+                    android:layout_width="96dp" android:layout_height="96dp"
+                    android:background="@drawable/bg_avatar" android:padding="22dp"
+                    android:importantForAccessibility="no" android:src="@drawable/ic_paw" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="@string/empty_title"
+                    android:textColor="@color/teal_dark" android:textSize="20sp" android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:gravity="center"
+                    android:text="@string/empty_text" android:textColor="@color/text_secondary" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="20dp"
+        android:contentDescription="@string/add_pet"
+        app:backgroundTint="@color/teal_primary" app:tint="@color/white"
+        app:srcCompat="@drawable/ic_add" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

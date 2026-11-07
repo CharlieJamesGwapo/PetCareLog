@@ -1,0 +1,12 @@
+*.iml
+.gradle
+build/
+.idea
+.kotlin
+local.properties
+*.apk
+*.mp4
+*-debug.log
+.DS_Store
+config.bat
+node_modules

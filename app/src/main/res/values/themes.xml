@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PetCare" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/teal_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/teal_tint</item>
+        <item name="colorOnPrimaryContainer">@color/teal_dark</item>
+        <item name="colorSecondary">@color/teal_dark</item>
+        <item name="colorError">@color/danger</item>
+        <item name="android:colorBackground">@color/surface_bg</item>
+        <item name="android:statusBarColor">@color/teal_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="shapeAppearanceSmallComponent">@style/Shape.PetCare.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/Shape.PetCare.Small</item>
+    </style>
+    <style name="Shape.PetCare.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="Widget.PetCare.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/teal_primary</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="navigationIconTint">@color/white</item>
+    </style>
+</resources>
